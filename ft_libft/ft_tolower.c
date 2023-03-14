@@ -6,13 +6,13 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 08:51:20 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 08:51:39 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/14 11:27:25 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int ch)
+int	ft_tolower(int ch)
 {
-    if (ch >= 'A' && ch <= 'Z')
-        return (ch + 32);
-    return (ch);
+	if (ch >= 'A' && ch <= 'Z')
+		return (ch + 32);
+	return (ch);
 }

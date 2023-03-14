@@ -6,13 +6,13 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 08:27:11 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 08:27:14 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/14 11:30:37 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 127)
+		return (1);
+	return (0);
 }

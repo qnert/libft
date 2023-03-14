@@ -6,15 +6,15 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 08:26:07 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 08:26:11 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/14 11:30:40 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= '1' && c <= '9')
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= '1' && c <= '9')
+	{
+		return (1);
+	}
+	return (0);
 }

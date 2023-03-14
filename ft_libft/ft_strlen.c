@@ -6,18 +6,18 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 08:35:15 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 08:42:10 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/14 11:32:31 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen(char str[])
+size_t	ft_strlen(char str[])
 {
-    size_t len;
-    len = 0;
-    
-    while (str[len] != '\0')
-    {
-        len++;
-    }
-    return (len);
+	size_t	len;
+
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
 }
