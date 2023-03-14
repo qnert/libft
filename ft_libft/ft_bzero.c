@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 13:58:27 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 15:49:33 by skunert          ###   ########.fr       */
+/*   Created: 2023/03/14 16:09:49 by skunert           #+#    #+#             */
+/*   Updated: 2023/03/14 16:33:41 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_bzero(void *dst, size_t n)
 {
-	int				i;
 	unsigned char	*ptr_dst;
-	unsigned char	*ptr_src;
+	int				i;
 
-	i = 0;
 	ptr_dst = (unsigned char *) dst;
-	ptr_src = (unsigned char *) src;
-	while (src != 0 && i < n)
+	i = 0;
+	while (i < n)
 	{
-		ptr_dst[i] = ptr_src[i];
+		ptr_dst[i] = '\0';
 		i++;
 	}
-	return (dst);
 }

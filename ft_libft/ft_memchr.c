@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 13:58:27 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 15:49:33 by skunert          ###   ########.fr       */
+/*   Created: 2023/03/14 16:34:47 by skunert           #+#    #+#             */
+/*   Updated: 2023/03/14 16:38:47 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	int				i;
-	unsigned char	*ptr_dst;
-	unsigned char	*ptr_src;
+	unsigned char	*ptr_str;
+	unsigned int	i;
 
+	ptr_str = (unsigned char *) str;
 	i = 0;
-	ptr_dst = (unsigned char *) dst;
-	ptr_src = (unsigned char *) src;
-	while (src != 0 && i < n)
+	while (ptr_str != 0 && i < n)
 	{
-		ptr_dst[i] = ptr_src[i];
+		if (ptr_str[i] == (unsigned char) c)
+		{
+			return (ptr_str + i);
+		}
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }
