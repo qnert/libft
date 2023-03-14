@@ -6,11 +6,9 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 09:56:13 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 11:08:33 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/14 11:11:21 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
