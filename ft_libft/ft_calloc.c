@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 18:29:29 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 18:50:43 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/15 10:06:34 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*ptr;
+
 	ptr = malloc(nitems * size);
 	if (ptr == NULL || nitems == 0 || size == 0)
 		return (NULL);
