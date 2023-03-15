@@ -6,11 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:22:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 16:07:49 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/15 10:10:46 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

@@ -6,9 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:50:23 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 10:07:09 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/15 10:11:17 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

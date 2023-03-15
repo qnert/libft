@@ -6,9 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:09:49 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 16:33:41 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/15 10:11:15 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *dst, size_t n)
 {

@@ -6,9 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 08:43:09 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 11:27:15 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/15 10:10:09 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int ch)
 {

@@ -6,9 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:34:47 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 16:38:47 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/15 10:10:55 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {

@@ -6,9 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:40:53 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/14 13:17:21 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/15 10:10:22 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

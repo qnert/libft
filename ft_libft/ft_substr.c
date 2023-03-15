@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 08:26:46 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 10:11:02 by skunert          ###   ########.fr       */
+/*   Created: 2023/03/15 10:09:19 by skunert           #+#    #+#             */
+/*   Updated: 2023/03/15 10:10:00 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int	ft_isascii(int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
+
 }
