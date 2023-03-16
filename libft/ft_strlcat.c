@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:20:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/16 17:56:34 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/16 18:32:49 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ size_t	ft_strlen(char *str)
 	return (len);
 }
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
-	int dst_len;
+	int	dst_len;
 	int	count;
 
 	i = 0;
