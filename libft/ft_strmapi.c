@@ -1,18 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 13:10:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 13:23:34 by skunert          ###   ########.fr       */
+/*   Created: 2023/03/16 05:00:07 by skunert           #+#    #+#             */
+/*   Updated: 2023/03/16 13:22:55 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-char **ft_split(char const *s, char c)
-{
-	char	**split_arr;
-	int		i;
-}
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))

@@ -1,30 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 11:39:57 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 13:41:44 by skunert          ###   ########.fr       */
+/*   Created: 2023/03/16 16:20:03 by skunert           #+#    #+#             */
+/*   Updated: 2023/03/16 17:56:34 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+size_t	ft_strlen(char *str)
 {
-	int	len_s1;
-	int	len_set;
+	size_t	len;
+
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
+
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
 	int	i;
-	int	tmp;
+	int dst_len;
+	int	count;
 
 	i = 0;
-	len_s1 = ft_strlen((char *) s1);
-	len_set = ft_strlen((char *) set);
-	if (s1[0] == set[0] && s1[1] == set[1])
+	dst_len = ft_strlen(dst);
+	count = dstsize - dst_len;
+	if (count > 0)
 	{
-
+		while (i < count - 1)
+		{
+			dst[dst_len + i] = src[i];
+			i++;
+		}
 	}
+	return (dst_len + ft_strlen((char *) src));
 }

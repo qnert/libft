@@ -6,27 +6,51 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 13:42:02 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/16 17:56:48 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_itoa(int n)
+#include <stdlib.h>
+#include "libft.h"
+
+static int	nbr_len(int n)
 {
 	int	i;
-	int	count;
-	int	tmp;
 
-	tmp = n;
-	while (tmp / 10 != 0)
+	i = 0;
+	while (n != 0)
 	{
-		tmp = tmp / 10;
-		count++;
+		n = n / 10;
+		i++;
 	}
-	tmp = 1;
-	count++;
-	while (count != 0)
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	int		i;
+	int		ten_pow;
+	int		len;
+	char	*nbr;
+
+	i = 0;
+	ten_pow = 1;
+	len = nbr_len(n);
+	nbr = (char *) malloc(sizeof(char) * len);
+	if (!nbr)
+		return (NULL);
+	while (i != len - 1)
 	{
-		tmp = tmp * 10;
-		count--;
+		ten_pow *= 10;
+		i++;
 	}
+	i = 0;
+	while (ten_pow != 0)
+	{
+		nbr[i] = n / ten_pow + 48;
+		n = n - (n / ten_pow * ten_pow);
+		ten_pow = ten_pow / 10;
+		i++;
+	}
+	return (nbr);
 }
