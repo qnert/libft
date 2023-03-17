@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 19:03:12 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/16 19:10:21 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/17 15:16:16 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ void	ft_putendl_fd(char *s, int fd)
 	while (s[i] != '\0')
 	{
 		c = s[i];
-		write(fd, c, 1);
+		write(fd, s + i, 1);
+		i++;
 	}
-	write(1, '\n', 1);
+	c = '\n';
+	write(fd, &c, 1);
 }
