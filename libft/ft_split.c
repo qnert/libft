@@ -6,12 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/19 19:14:06 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:41:59 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
+#include "libft.h"
 #include <stdlib.h>
 
 static int	check_split_words(const char *s, char c)
@@ -42,21 +41,7 @@ static int	check_split_words(const char *s, char c)
 	return (counter + 1);
 }
 
-static int	check_split_len(const char *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			break;
-		i++;
-	}
-	return (i);
-}
-
-static char	*get_word(char *s, char c)
+static char	*get_alloc_word(const char *s, char c)
 {
 	int		i;
 	int		tmp;
@@ -66,7 +51,7 @@ static char	*get_word(char *s, char c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			break;
+			break ;
 		i++;
 	}
 	str = ft_calloc(i + 1, sizeof(char));
@@ -81,20 +66,20 @@ static char	*get_word(char *s, char c)
 	return (str);
 }
 
-static char	*get_next_word(char *s, char c)
+static const char	*get_next_word(const char *s, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 		{
-			while(s[i] != '\0' && s[i] == c)
+			while (s[i] != '\0' && s[i] == c)
 			{
 				i++;
 			}
-			break;
+			break ;
 		}
 		i++;
 	}
@@ -103,18 +88,20 @@ static char	*get_next_word(char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	char **arr;
+	int			i;
+	const char	*curr_pos;
+	const char	*tmp;
+	const char	**arr;
 
-	return (NULL);
-}
-
-int	main(void)
-{
-	char *s = "Simon";
-	char c = 'm';
-	char *str = get_next_word(s, c);
-
-	printf("%s\n", str);
-	return (0);
+	i = 0;
+	curr_pos = s;
+	arr = malloc(check_split_words(s, c) * sizeof(char *));
+	while (i < check_split_words(s, c))
+	{
+		tmp = get_alloc_word(curr_pos, c);
+		arr[i] = tmp;
+		curr_pos = get_next_word(curr_pos, c);
+		i++;
+	}
+	return ((char **)arr);
 }

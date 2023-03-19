@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 14:51:08 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/19 18:06:06 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:42:58 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	check_front(const char *s, const char *set)
 	while (s[i] != '\0')
 	{
 		if (ft_strchr(set, s[i]) == 0)
-			break;
+			break ;
 		i++;
 	}
 	return (i);
@@ -36,7 +36,7 @@ static int	check_back(const char *s, const char *set)
 	while (s[len - 1] != s[0])
 	{
 		if (ft_strchr(set, s[len - 1]) == 0)
-			break;
+			break ;
 		i++;
 		len--;
 	}

@@ -6,14 +6,12 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:10:29 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/18 22:11:51 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:43:24 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-#include <stddef.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *dst, size_t n);
