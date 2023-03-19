@@ -6,12 +6,12 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:07:42 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 11:32:55 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 20:17:12 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

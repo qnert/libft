@@ -6,12 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/19 19:41:59 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 20:15:52 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	check_split_words(const char *s, char c)
 {

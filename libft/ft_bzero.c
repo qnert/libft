@@ -6,11 +6,12 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:09:49 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/19 19:55:03 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 20:21:25 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_bzero(void *dst, size_t n)
 {
@@ -19,6 +20,9 @@ void	ft_bzero(void *dst, size_t n)
 
 	ptr_dst = (unsigned char *) dst;
 	i = 0;
-	while (i++ < n)
+	while (i < n - 1)
+	{
 		ptr_dst[i] = '\0';
+		i++;
+	}
 }
