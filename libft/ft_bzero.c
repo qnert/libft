@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:09:49 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 11:57:11 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:55:03 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *dst, size_t n)
 {
 	unsigned char	*ptr_dst;
-	int				i;
+	unsigned int	i;
 
 	ptr_dst = (unsigned char *) dst;
 	i = 0;

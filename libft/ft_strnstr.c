@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:40:53 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/16 17:56:12 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:57:16 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
-	int	counter;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	counter;
 
 	i = 0;
 	j = 0;

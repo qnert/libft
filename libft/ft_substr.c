@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 10:09:19 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 11:07:08 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:57:29 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*sub_str;
+	unsigned int		i;
+	char				*sub_str;
 
 	i = 0;
 	sub_str = (char *)malloc(sizeof(char) * (len + 1));

@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:23:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 10:10:43 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:55:33 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *str, int c, size_t n)
 {
 	unsigned char	*ptr;
-	int				i;
+	unsigned int	i;
 
 	ptr = (unsigned char *) str;
 	i = 0;

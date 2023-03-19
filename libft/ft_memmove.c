@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:22:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/15 10:10:46 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/19 19:56:17 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	unsigned char	*ptr_tmp;
 	unsigned int	i;
 
+	ptr_tmp = NULL;
 	ptr_dst = (unsigned char *) dst;
 	ptr_src = (unsigned char *) src;
 	i = 0;
