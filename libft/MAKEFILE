@@ -6,10 +6,7 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 OBJS = $(SRCS: .c = .o)
 HEADER = libft.h
 
-all: %.o $(NAME)
-
-%.o: %.c $(HEADERS) Makefile
-	$(CC) $(CFLAGS) -c $< -o $@
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
