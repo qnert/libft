@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 09:23:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 16:25:12 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 16:40:14 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	{
 		if (str1[i] != str2[i])
 		{
-			return ((char)str1[i] - (char)str2[i]);
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		}
 		i++;
 	}
