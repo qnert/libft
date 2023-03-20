@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 10:57:46 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 16:17:16 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,21 @@ char	*ft_itoa(int n)
 	i = 0;
 	ten_pow = 1;
 	len = nbr_len(n);
-	nbr = (char *) malloc(sizeof(char) * len);
+	nbr = (char *) malloc(sizeof(char) * len + 1);
 	if (!nbr)
 		return (NULL);
-	while (i != len - 1)
+	while (i++ != len - 1)
 	{
 		ten_pow *= 10;
-		i++;
 	}
 	i = 0;
-	while (ten_pow != 0)
+	while (i < len)
 	{
 		nbr[i] = n / ten_pow + 48;
 		n = n - (n / ten_pow * ten_pow);
 		ten_pow = ten_pow / 10;
 		i++;
 	}
+	nbr[i] = '\0';
 	return (nbr);
 }

@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 09:23:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/19 19:56:59 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 16:25:12 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	unsigned int	i;
 
 	i = 0;
-	while (str1[i] != '\0' && str2[i] != '\0' && i < n)
+	while (i < n)
 	{
 		if (str1[i] != str2[i])
 		{
