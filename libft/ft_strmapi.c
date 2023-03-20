@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 10:33:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 11:18:21 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 11:22:15 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		
+		res[i] = f(i, s[i]);
+		i++;
 	}
-
+	res[i] = '\0';
+	return ((char *)res);
 }
