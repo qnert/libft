@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/19 20:15:52 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 16:06:01 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	curr_pos = s;
-	arr = malloc(check_split_words(s, c) * sizeof(char *));
+	arr = ft_calloc(check_split_words(s, c), sizeof(char *));
 	while (i < check_split_words(s, c))
 	{
 		tmp = get_alloc_word(curr_pos, c);

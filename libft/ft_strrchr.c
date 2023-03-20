@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 09:13:18 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/18 22:49:18 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 16:12:54 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_strrchr(const char *str, int c)
 		}
 		i++;
 	}
+	if (str[i] == (char)c)
+		tmp = (char *) str + i;
 	if (tmp == NULL)
 	{
 		return (NULL);
