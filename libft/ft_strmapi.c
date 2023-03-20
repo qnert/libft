@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 13:23:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 10:36:51 by skunert          ###   ########.fr       */
+/*   Created: 2023/03/20 10:33:33 by skunert           #+#    #+#             */
+/*   Updated: 2023/03/20 10:34:33 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *str, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char	*ptr;
-	unsigned int	i;
-
-	ptr = (unsigned char *) str;
-	i = 0;
-	while (ptr[i] != '\0' && i < n)
-	{
-		ptr[i] = (char)c;
-		i++;
-	}
-	return (ptr);
+	
 }
