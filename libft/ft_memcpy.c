@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:58:27 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 10:50:17 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 11:20:21 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	ptr_dst = (unsigned char *) dst;
 	ptr_src = (unsigned char *) src;
-	while (src != 0 && i < n)
+	while (ptr_src[i] && i < n)
 	{
 		ptr_dst[i] = ptr_src[i];
 		i++;

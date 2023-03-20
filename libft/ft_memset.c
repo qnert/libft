@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:23:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 10:36:51 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/20 11:20:31 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *str, int c, size_t n)
 
 	ptr = (unsigned char *) str;
 	i = 0;
-	while (ptr[i] != '\0' && i < n)
+	while (ptr[i] && i < n)
 	{
 		ptr[i] = (char)c;
 		i++;
