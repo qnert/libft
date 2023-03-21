@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 14:51:08 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/21 10:16:16 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/21 10:38:35 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,23 @@ static int	check_back(const char *s, const char *set)
 
 	i = 0;
 	len = ft_strlen((char *)s);
-	while (s[len - 1] != s[0])
+	while (s[len - i - 1] != 0)
 	{
-		if (ft_strchr(set, s[len - 1]) == 0)
+		if (ft_strchr(set, s[len - i - 1]) == 0)
 			break ;
 		i++;
-		len--;
 	}
 	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
 	int	start;
 	int	cpy_len;
 
-	i = 0;
 	start = check_front(s1, set);
 	cpy_len = ft_strlen((char *)s1) - check_back(s1, set) - start;
+	if (start >= cpy_len)
+		cpy_len = 0;
 	return (ft_substr(s1, start, cpy_len));
 }
