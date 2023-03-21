@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:34:47 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 19:04:12 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/21 18:26:23 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	{
 		if (ptr_str[i] == (unsigned char) c)
 			return (ptr_str + i);
-		if (ptr_str[i] == '\0')
-			break ;
 		i++;
 	}
 	return (NULL);
