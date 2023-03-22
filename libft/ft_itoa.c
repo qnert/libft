@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/21 12:52:18 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 11:13:41 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ static int	nbr_len(int n)
 
 	i = 0;
 	if (n < 0)
+	{
 		n *= -1;
+	}
 	if (n < 10)
 		return (1);
 	while (n != 0)
@@ -30,25 +32,11 @@ static int	nbr_len(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+static void	top_up_array(int i, int n, int ten_pow, char *nbr)
 {
-	int		i;
-	int		ten_pow;
-	int		len;
-	char	*nbr;
+	int	len;
 
-	i = 0;
-	ten_pow = 1;
 	len = nbr_len(n);
-	nbr = (char *) malloc(sizeof(char) * len + 2);
-	if (!nbr)
-		return (NULL);
-	while (i != len - 1)
-	{
-		ten_pow *= 10;
-		i++;
-	}
-	i = 0;
 	if (n < 0)
 	{
 		nbr[i] = '-';
@@ -63,6 +51,27 @@ char	*ft_itoa(int n)
 		ten_pow = ten_pow / 10;
 		i++;
 	}
-	nbr[i] = '\0';
+}
+
+char	*ft_itoa(int n)
+{
+	int		i;
+	int		ten_pow;
+	int		len;
+	char	*nbr;
+
+	i = 0;
+	ten_pow = 1;
+	len = nbr_len(n);
+	nbr = ft_calloc(len + 2, sizeof(char));
+	if (!nbr)
+		return (NULL);
+	while (i != len - 1)
+	{
+		ten_pow *= 10;
+		i++;
+	}
+	i = 0;
+	top_up_array(i, n, ten_pow, nbr);
 	return (nbr);
 }

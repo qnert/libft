@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:10:29 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 10:33:54 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 10:52:13 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <limits.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *dst, size_t n);

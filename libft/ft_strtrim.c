@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 14:51:08 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/21 10:38:35 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 11:08:38 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,13 @@ static int	check_back(const char *s, const char *set)
 	int		len;
 
 	i = 0;
-	len = ft_strlen((char *)s);
-	while (s[len - i - 1] != 0)
+	len = ft_strlen((char *)s) - 1;
+	while (len >= 0)
 	{
-		if (ft_strchr(set, s[len - i - 1]) == 0)
+		if (ft_strchr(set, s[len]) == 0)
 			break ;
 		i++;
+		len--;
 	}
 	return (i);
 }
