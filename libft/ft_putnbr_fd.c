@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:36:44 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/22 11:06:04 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 14:56:01 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,23 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	c;
+	long long int	nbr;
+	char			c;
 
-	if (n == -2147483648)
-	{
-		write (fd, "-", 1);
-		write (fd, "2", 1);
-		ft_putnbr_fd(147483648, fd);
-	}
-	if (n < 0)
+	nbr = n;
+	if (nbr < 0)
 	{
 		write(fd, "-", 1);
-		n *= -1;
+		nbr *= -1;
 	}
-	if (n > 10)
+	if (nbr >= 10)
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putnbr_fd(nbr % 10, fd);
 	}
 	else
 	{
-		c = n + '0';
+		c = nbr + '0';
 		write(fd, &c, 1);
 	}
 }

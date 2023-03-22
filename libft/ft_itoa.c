@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/22 11:13:41 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 14:33:02 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	*ft_itoa(int n)
 	int		len;
 	char	*nbr;
 
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	i = 0;
 	ten_pow = 1;
 	len = nbr_len(n);
