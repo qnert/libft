@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/22 14:33:02 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 15:37:27 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,20 +55,18 @@ static void	top_up_array(int i, int n, int ten_pow, char *nbr)
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		ten_pow;
-	int		len;
-	char	*nbr;
+	int				i;
+	int				ten_pow;
+	char			*nbr;
 
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	i = 0;
 	ten_pow = 1;
-	len = nbr_len(n);
-	nbr = ft_calloc(len + 2, sizeof(char));
+	nbr = ft_calloc(nbr_len(n) + 2, sizeof(char));
 	if (!nbr)
 		return (NULL);
-	while (i != len - 1)
+	while (i != nbr_len(n) - 1)
 	{
 		ten_pow *= 10;
 		i++;
