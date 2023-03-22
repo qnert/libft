@@ -10,10 +10,14 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
 	ft_tolower.c ft_toupper.c
 OBJS = $(SRCS:.c=.o)
+BONUS_SRC = ft_lstnew.c
+BONUS_OBJS = $(BONUS_SRC:.c=.o)
 HEADER = libft
 
 %.o: %.c $(HEADERS) Makefile
 	$(CC) $(CFLAG) -c $< -o $@
+
+	$(CC) $(CFLAG) -c $(BONUS_SRC) -o $(BONUS_OBJS)
 
 all: $(NAME)
 
@@ -21,9 +25,12 @@ $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
+
+bonus:
+	ar -rcs $(NAME) $(BONUS_OBJS)
 
 re: fclean all
