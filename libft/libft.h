@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:10:29 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/22 10:52:13 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 16:01:12 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <stddef.h>
 # include <limits.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *dst, size_t n);

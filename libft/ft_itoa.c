@@ -6,12 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/22 15:37:27 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/22 15:58:46 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	nbr_len(int n)
 {
