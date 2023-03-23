@@ -139,7 +139,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char **arr = ft_split(" hj  ", ' ');
-	printf("%s\n", arr[1]);
+	char **arr = ft_split("   ", ' ');
+	printf("%d\n", check_split_words("      ", ' '));
 	return (0);
 }
