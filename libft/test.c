@@ -63,7 +63,7 @@ static int	check_split_words(const char *s, char c)
 	{
 		counter--;
 	}
-	return (counter + 1);
+	return (counter);
 }
 
 static char	*get_alloc_word(const char *s, char c)
@@ -133,15 +133,13 @@ char	**ft_split(char const *s, char c)
 		curr_pos = get_next_word(curr_pos, c);
 		i++;
 	}
-	if (check_split_words(s, c) != 1)
-		i--;
 	arr[i] = NULL;
 	return (arr);
 }
 
 int	main(void)
 {
-	char **arr = ft_split("     ", ' ');
-	printf("%s\n", arr[0]);
+	char **arr = ft_split(" hj  ", ' ');
+	printf("%s\n", arr[1]);
 	return (0);
 }

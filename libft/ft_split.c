@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/23 16:05:18 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/23 16:37:39 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	check_split_words(const char *s, char c)
 	{
 		counter--;
 	}
-	return (counter + 1);
+	return (counter);
 }
 
 static char	*get_alloc_word(const char *s, char c)
@@ -105,8 +105,6 @@ char	**ft_split(char const *s, char c)
 		curr_pos = get_next_word(curr_pos, c);
 		i++;
 	}
-	if (check_split_words(s, c) != 1)
-		i--;
 	arr[i] = NULL;
 	return (arr);
 }
