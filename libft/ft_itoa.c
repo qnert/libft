@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/22 15:58:46 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/23 15:00:19 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ static int	nbr_len(int n)
 
 	i = 0;
 	if (n < 0)
-	{
 		n *= -1;
-	}
 	if (n < 10)
 		return (1);
 	while (n != 0)
