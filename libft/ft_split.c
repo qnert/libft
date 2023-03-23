@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/23 16:37:39 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/23 19:01:13 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,14 @@ static int	check_split_words(const char *s, char c)
 	counter = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] != c)
 		{
-			if (s[i + 1] == c && s[i + 1] != '\0')
-			{
-			}
-			else
-			{
-				counter++;
-			}
+			counter++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
 		}
-		i++;
-	}
-	if (s[ft_strlen((char *)s) - 1] == c)
-	{
-		counter--;
+		else
+			i++;
 	}
 	return (counter);
 }
@@ -54,6 +47,8 @@ static char	*get_alloc_word(const char *s, char c)
 		i++;
 	}
 	str = ft_calloc(i + 1, sizeof(char));
+	if (!str)
+		return (NULL);
 	tmp = i;
 	i = 0;
 	while (i < tmp)
@@ -99,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	arr = ft_calloc(check_split_words(s, c) + 1, sizeof(char *));
 	if (arr == NULL)
 		return (free(arr), NULL);
-	while (i < check_split_words(s, c))
+	while (i < check_split_words(s, c) && curr_pos != NULL)
 	{
 		arr[i] = get_alloc_word(curr_pos, c);
 		curr_pos = get_next_word(curr_pos, c);

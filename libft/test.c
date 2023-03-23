@@ -21,9 +21,7 @@ size_t	ft_strlen(const char *str)
 
 	len = 0;
 	while (str[len] != '\0')
-	{
 		len++;
-	}
 	return (len);
 }
 
@@ -47,21 +45,14 @@ static int	check_split_words(const char *s, char c)
 	counter = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] != c)
 		{
-			if (s[i + 1] == c && s[i + 1] != '\0')
-			{
-			}
-			else
-			{
-				counter++;
-			}
+			counter++;
+			while(s[i] != c && s[i] != '\0')
+				i++;
 		}
-		i++;
-	}
-	if (s[ft_strlen((char *)s) - 1] == c)
-	{
-		counter--;
+		else
+			i++;
 	}
 	return (counter);
 }
@@ -127,7 +118,7 @@ char	**ft_split(char const *s, char c)
 	arr = ft_calloc(check_split_words(s, c) + 1, sizeof(char *));
 	if (arr == NULL)
 		return (free(arr), NULL);
-	while (i < check_split_words(s, c))
+	while (i < check_split_words(s, c) && curr_pos != NULL)
 	{
 		arr[i] = get_alloc_word(curr_pos, c);
 		curr_pos = get_next_word(curr_pos, c);
@@ -139,7 +130,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char **arr = ft_split("   ", ' ');
-	printf("%d\n", check_split_words("      ", ' '));
+	char **arr = ft_split("Tripouille", ' ');
+	printf("%s\n", arr[1]);
 	return (0);
 }
