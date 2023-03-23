@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/20 16:06:01 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/23 11:55:55 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static char	*get_alloc_word(const char *s, char c)
 	return (str);
 }
 
-static const char	*get_next_word(const char *s, char c)
+static char	*get_next_word(const char *s, char c)
 {
 	int	i;
 
@@ -82,25 +82,26 @@ static const char	*get_next_word(const char *s, char c)
 		}
 		i++;
 	}
-	return (s + i);
+	return ((char *)s + i);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int			i;
-	const char	*curr_pos;
-	const char	*tmp;
-	const char	**arr;
+	char		*curr_pos;
+	char		**arr;
 
 	i = 0;
-	curr_pos = s;
-	arr = ft_calloc(check_split_words(s, c), sizeof(char *));
+	curr_pos = (char *)s;
+	arr = ft_calloc(check_split_words(s, c) + 1, sizeof(char *));
+ 	if (arr == NULL)
+		return (free(arr), NULL);
 	while (i < check_split_words(s, c))
 	{
-		tmp = get_alloc_word(curr_pos, c);
-		arr[i] = tmp;
+		arr[i] = get_alloc_word(curr_pos, c);
 		curr_pos = get_next_word(curr_pos, c);
 		i++;
 	}
-	return ((char **)arr);
+	arr[i] = NULL;
+	return (arr);
 }
