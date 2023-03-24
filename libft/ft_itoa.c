@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:33 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/23 15:00:19 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/24 14:27:43 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,10 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	i = 0;
 	ten_pow = 1;
-	nbr = ft_calloc(nbr_len(n) + 2, sizeof(char));
+	if (n < 0)
+		nbr = ft_calloc(nbr_len(n) + 2, sizeof(char));
+	else
+		nbr = ft_calloc(nbr_len(n) + 1, sizeof(char));
 	if (!nbr)
 		return (NULL);
 	while (i != nbr_len(n) - 1)
