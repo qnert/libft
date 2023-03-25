@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/23 19:01:13 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/25 16:36:01 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,8 @@ char	**ft_split(char const *s, char c)
 	char		**arr;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	if (s[i] == c)
 		curr_pos = get_next_word((char *)s, c);
 	else
