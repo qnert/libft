@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/25 16:36:01 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/27 11:05:44 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,20 @@ static char	*get_next_word(const char *s, char c)
 	return ((char *)s + i);
 }
 
+static void	free_arr(char **arr, unsigned int size)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i] != NULL && i < size)
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int			i;
@@ -99,6 +113,11 @@ char	**ft_split(char const *s, char c)
 	while (i < check_split_words(s, c) && curr_pos != NULL)
 	{
 		arr[i] = get_alloc_word(curr_pos, c);
+		if (arr[i] == NULL)
+		{
+			free_arr(arr, i);
+			return (arr);
+		}
 		curr_pos = get_next_word(curr_pos, c);
 		i++;
 	}
