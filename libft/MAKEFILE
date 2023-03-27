@@ -15,7 +15,7 @@ BONUS_SRCS = ft_lstnew.c ft_lstlast.c ft_lstadd_front.c ft_lstadd_back.c \
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 HEADER = libft
 
-%.o: %c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)

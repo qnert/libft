@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 18:51:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/27 12:32:19 by skunert          ###   ########.fr       */
+/*   Updated: 2023/03/27 15:27:31 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ char	**ft_split(char const *s, char c)
 	{
 		arr[i] = get_alloc_word(curr_pos, c);
 		if (arr[i] == NULL)
-			return (free_arr(arr, i), arr);
+			return (free_arr(arr, i), NULL);
 		curr_pos = get_next_word(curr_pos, c);
 		i++;
 	}
