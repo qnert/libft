@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 10:09:19 by skunert           #+#    #+#             */
-/*   Updated: 2023/03/27 15:58:22 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/01 16:44:18 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	s_len = ft_strlen((char *)s);
 	if (start > s_len)
+	{
 		len = 0;
+		start = s_len;
+	}
 	if (len > s_len)
 		len = s_len;
 	if (start + len > s_len)
@@ -29,13 +32,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_str = ft_calloc(len + 1, sizeof(char));
 	if (sub_str == NULL)
 		return (NULL);
-	while (start < s_len && i < len && s[start] != '\0' && s[i] != '\0')
-	{
-		if (start > ft_strlen((char *)s))
-			break ;
-		sub_str[i] = s[start];
-		i++;
-		start++;
-	}
+	ft_strlcpy(sub_str, s + start, len + 1);
 	return (sub_str);
 }
