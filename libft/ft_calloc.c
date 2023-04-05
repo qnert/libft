@@ -15,9 +15,9 @@
 void	*ft_calloc(size_t nitems, size_t size)
 {
 	void			*ptr;
-	size_t			shield;
+	size_t			protect;
 
-	shield = nitems * size;
+	protect = nitems * size;
 	if ((size != 0) && (shield / size != nitems))
 		return (NULL);
 	ptr = malloc(nitems * size);
