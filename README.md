@@ -27,8 +27,6 @@ Libft is a custom C library that implements essential functions found in the sta
 - **Language:** The project must be written in **C** and adhere to the 42 School **Norm**.
 - **Memory Management:** All allocated memory on the heap must be properly freed; no memory leaks are allowed.
 - **Makefile Requirements:** The Makefile must compile with `-Wall`, `-Wextra`, and `-Werror` flags and should contain the specified rules. `libtool` is not allowed; use `ar` to create `libft.a`.
-- **Testing:** It’s recommended to create personal test programs to verify each function, even though these tests won’t be submitted.
-- **Submission:** Only files in the Git repository will be graded, and any error during automated grading (Deepthought) will stop the evaluation process.
 
 ---
 
